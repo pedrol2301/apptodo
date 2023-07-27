@@ -8,29 +8,34 @@ class TodoListItem extends StatelessWidget {
     super.key,
     required this.todo,
     required this.deleteTodo,
+    required this.finishTodo,
   });
 
   final Todo todo;
   final Function(Todo) deleteTodo;
+  final Function(Todo) finishTodo;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Slidable(
-        startActionPane: ActionPane(
-          motion: StretchMotion(),
-          extentRatio: 0.25,
-          children: [
-            SlidableAction(
-                borderRadius: BorderRadius.circular(4),
-                icon: Icons.check,
-                label: 'Concluir',
-                backgroundColor: Colors.green,
-                foregroundColor: Colors.white,
-                onPressed: null)
-          ],
-        ),
+        //TODO implement finish todo
+        // startActionPane: ActionPane(
+        //   motion: StretchMotion(),
+        //   extentRatio: 0.25,
+        //   children: [
+        //     SlidableAction(
+        //         borderRadius: BorderRadius.circular(4),
+        //         icon: Icons.check,
+        //         label: 'Concluir',
+        //         backgroundColor: Colors.green,
+        //         foregroundColor: Colors.white,
+        //         onPressed: (context){
+        //           finishTodo(todo);
+        //         })
+        //   ],
+        // ),
         endActionPane: ActionPane(
           motion: StretchMotion(),
           extentRatio: 0.25,
